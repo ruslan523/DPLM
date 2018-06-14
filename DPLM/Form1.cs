@@ -32,16 +32,16 @@ namespace DPLM
             for (int i = 0; i < counter; i++)
             {
                 label1.Text += " " + Convert.ToString(mass[i]);
-                mass[i] = 400 - mass[i] * 20 + 100;
+                mass[i] = 400 - mass[i] * 10 + 100;
             }
-            PointF[] pnts = new PointF[1000];
+            PointF[] pnts = new PointF[counter];
             for (int i = 0; i < counter; i++)
             {
-                pnts[i] = new PointF(2 + i * 10, mass[i]);
+                pnts[i] = new PointF(50 + 2 + i * 10, mass[i]);
             }
             for (int i = 0; i < counter; i++)
             {
-                g.DrawEllipse(pR, i * 10, mass[i], 4, 4);
+                g.DrawEllipse(pR, 50 + i * 10, mass[i] - 2, 4, 4);
             }
             g.DrawCurve(pB, pnts);
         }
@@ -49,6 +49,30 @@ namespace DPLM
         private void button1_Click(object sender, EventArgs e)
         {
             Graphics g = Graphics.FromHwnd(pictureBox1.Handle);
+            Pen os = new Pen(Color.DarkGray, 3);
+            Pen osm = new Pen(Color.LightGray, 3);
+            for (int i = 0; i < 40; i++)
+            {
+                g.DrawLine(osm, 40, 500 - 10 * i, 50, 500 - 10 * i);
+            }
+            for (int i = 0; i < 100; i++)
+            {
+                g.DrawLine(osm, 2 + 50 + 10 * i, 500, 2 + 50 + 10 * i, 510);
+            }
+            for (int i = 0; i < 40; i++)
+            {
+                g.DrawLine(osm, 50, 500 - 10 * i, 1050, 500 - 10 * i);
+            }
+            for (int i = 0; i < 100; i++)
+            {
+                g.DrawLine(osm, 2 + 50 + 10 * i, 500, 2 + 50 + 10 * i, 100);
+            }
+            g.DrawLine(os, 50, 500, 1100, 500);
+            g.DrawLine(os, 50, 500, 50, 50);
+            g.DrawLine(os, 45, 60, 50, 50);
+            g.DrawLine(os, 55, 60, 50, 50);
+            g.DrawLine(os, 1090, 505, 1100, 500);
+            g.DrawLine(os, 1090, 495, 1100, 500);
             Pen[] pB = new Pen[]
             {
                 new Pen(Color.DarkBlue, 1),
@@ -84,6 +108,19 @@ namespace DPLM
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            double pos_X = Cursor.Position.X / 10.0 - 8.6;
+            double pos_Y = 65.0 - Cursor.Position.Y / 10.0 - 9.2;
+            label2.Text = "X = " + Convert.ToString(pos_X);
+            label3.Text = "Y = " + Convert.ToString(pos_Y);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
