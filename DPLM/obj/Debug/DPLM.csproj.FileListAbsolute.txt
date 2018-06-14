@@ -1,0 +1,10 @@
+C:\Users\rusla\source\repos\DPLM\DPLM\bin\Debug\DPLM.exe.config
+C:\Users\rusla\source\repos\DPLM\DPLM\bin\Debug\DPLM.exe
+C:\Users\rusla\source\repos\DPLM\DPLM\bin\Debug\DPLM.pdb
+C:\Users\rusla\source\repos\DPLM\DPLM\obj\Debug\DPLM.Form1.resources
+C:\Users\rusla\source\repos\DPLM\DPLM\obj\Debug\DPLM.Properties.Resources.resources
+C:\Users\rusla\source\repos\DPLM\DPLM\obj\Debug\DPLM.csproj.GenerateResource.cache
+C:\Users\rusla\source\repos\DPLM\DPLM\obj\Debug\DPLM.csproj.CoreCompileInputs.cache
+C:\Users\rusla\source\repos\DPLM\DPLM\obj\Debug\DPLM.exe
+C:\Users\rusla\source\repos\DPLM\DPLM\obj\Debug\DPLM.pdb
+C:\Users\rusla\source\repos\DPLM\DPLM\obj\Debug\DPLM.csprojAssemblyReference.cache
